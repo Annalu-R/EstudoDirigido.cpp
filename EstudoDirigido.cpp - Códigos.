@@ -1,0 +1,313 @@
+1. Escreva uma função chamada NÚMEROS que ao ser executada em um computador: a. Exiba os números de 1 a 100. (1.0) b. Faça uma chamada a essa função para exemplificar seu uso. (1.0)
+
+#include<iostream>
+using namespace std;
+
+void numero (int inicio, int fim){
+    int numero;
+
+    for (numero = inicio; numero <= fim; numero++){
+     cout << numero << endl;
+    }
+}
+
+int main(){
+
+    numero (1, 100);
+}
+
+2. Escreva uma função chamada SOMA que: a. Receba dois números como parâmetro e mostre a soma deles. b. Faça uma chamada a essa função para demonstrar seu uso.
+
+#include<iostream>
+using namespace std;
+
+void soma(int num1, int num2){
+
+  int soma =  num1 + num2;
+  cout << soma;
+}
+
+int main (){
+
+  soma(2, 2);
+
+}
+
+
+3. Escreva uma função chamada SOMA2 que: 
+a. Receba três números como parâmetro e retorne a soma deles.
+ b. Faça uma chamada a essa função para demonstrar seu uso. 
+#include<iostream>
+using namespace std;
+
+void soma(int num1, int num2, int num3){
+
+  int soma =  num1 + num2+ num3;
+  cout << soma;
+}
+
+int main (){
+
+  soma(3, 3, 3);
+  soma(2,14,45);
+  soma (3,6,12);
+}
+
+
+
+
+
+4. Faça um uma função chamada CONVERTE_MOEDA( valor, moeda ), que converta um valor em reais para dólar ou euro. Retorne o valor convertido.
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+void converter_moeda (double valor_reais,  string moeda){
+
+    double valor_euro = 4.50;
+    double valor_dolar = 4.20;
+
+    if ( moeda == "dolar"){
+
+        cout << fixed << setprecision(2) << valor_reais / valor_dolar;
+
+    } else if ( moeda == "euro"){
+
+         cout << fixed << setprecision(2) << valor_reais / valor_euro;
+
+    }else {
+        cout << "nosso sitema nao converte para essa moeda";
+    }
+    cout << endl;
+}
+
+int main(){
+
+    converter_moeda(16,"dolar");
+    converter_moeda(100,"dolar");
+    converter_moeda(100,"euro");
+
+}
+
+
+
+.5 Um palíndromo é uma palavra que quando lida de trás para frente representa a mesma palavra. Sabendo que uma palavra é um array de letras, programe uma função que receba uma palavra como parâmetro e retorne verdadeiro caso ela seja palíndromo é falso caso contrário. Faça uma chamada a essa função para exemplificar seu uso.  
+
+#include<iostream>
+using namespace std;
+
+void palindromo(){
+
+    string palavra;
+
+    cin >> palavra;
+
+    string inversa = "";
+
+    for ( int i = palavra.length() - 1; i >= 0; i--){
+        inversa = inversa + palavra[i];
+    }
+
+    if (palavra == inversa){
+        cout << endl << "É palíndroma!" << endl;
+ }
+}
+
+int main (){
+
+  palindromo();
+
+}
+6. Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são: 
+a. "Telefonou para a vítima?" 
+b "Esteve no local do crime?"
+c "Mora perto da vítima?"
+d "Devia para a vítima?"
+e "Já trabalhou com a vítima?"
+ O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como 
+"Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+#include <iostream>
+using namespace std;
+int set_crime (string culpado);
+int main(){
+
+    int cri[5], classificacao = 0;
+    string resultado;
+
+    cout << "Telefonou para a vitima?" << "\n";
+    cin >> resultado;
+    cri[0] = set_crime(resultado);
+
+    cout << "Esteve no local do crime?" << "\n";
+    cin >> resultado;
+    cri[1] = set_crime(resultado);
+
+    cout << "Mora perto da vitima?" << "\n";
+    cin >> resultado;
+    cri[2] = set_crime(resultado);
+
+    cout << "Devia para a vitima?" << "\n";
+    cin >>resultado;
+    cri[3] = set_crime(resultado);
+
+    cout << "Ja trabalhou com a vitima?" << "\n";
+    cin >> resultado;
+    cri[4] = set_crime(resultado);
+
+    if (  classificacao < 2){
+        cout << "Inocente" << "\n";
+    }
+    else if (  classificacao <= 2){
+        cout << "suspeito(a)" << "\n";
+    }
+    else if (   classificacao <= 2 ||  classificacao <= 5){
+        cout << "Cumplice" << "\n";
+    }
+    else if ( classificacao < 5){
+        cout << "Assassino(a)" << "\n";
+    }
+
+return 0;
+}
+int set_crime (string culpado){
+    if (culpado == "sim") {
+    }
+    else if ( culpado == "nao"){
+    }else{
+    cout << "Digite algo tipo (sim ou nao): ";
+    cin >> culpado;
+    }
+}
+#include <iostream>
+using namespace std;
+int set_crime (string culpado);
+int main(){
+
+    int cri[5], classificacao = 0;
+    string resultado;
+
+    cout << "Telefonou para a vitima?" << "\n";
+    cin >> resultado;
+    cri[0] = set_crime(resultado);
+
+    cout << "Esteve no local do crime?" << "\n";
+    cin >> resultado;
+    cri[1] = set_crime(resultado);
+
+    cout << "Mora perto da vitima?" << "\n";
+    cin >> resultado;
+    cri[2] = set_crime(resultado);
+
+    cout << "Devia para a vitima?" << "\n";
+    cin >>resultado;
+    cri[3] = set_crime(resultado);
+
+    cout << "Ja trabalhou com a vitima?" << "\n";
+    cin >> resultado;
+    cri[4] = set_crime(resultado);
+
+    if (  classificacao < 2){
+        cout << "Inocente" << "\n";
+    }
+    else if (  classificacao <= 2){
+        cout << "suspeito(a)" << "\n";
+    }
+    else if (   classificacao <= 2 ||  classificacao <= 5){
+        cout << "Cumplice" << "\n";
+    }
+    else if ( classificacao < 5){
+        cout << "Assassino(a)" << "\n";
+    }
+
+return 0;
+}
+int set_crime (string culpado){
+    if (culpado == "sim") {
+    }
+    else if ( culpado == "nao"){
+    }else{
+    cout << "Digite algo tipo (sim ou nao): ";
+    cin >> culpado;. 
+    }
+}
+
+7. Implemente uma função que receba uma mensagem por parâmetro e retorne essa mensagem em letras minúsculas. 
+#include<iostream>
+using namespace std;
+
+void mensagem(string word){
+
+cin >> word;
+for( int i = 0 ; i <= word.size ; i++){
+
+string word[ i ];
+
+cout << word[ i ]
+
+
+  
+  cout << mensagem;
+}
+
+int main (){
+
+  return mensagem();
+
+}
+
+
+
+
+8. Implemente uma função que recebe as três valores inteiros, e usando a fórmula de Bhaskara calcule uma equação do segundo grau. Sua função deve:
+ a. Mostrar x’e x’’ como resultado;
+ b. Caso o delta seja um valor negativo exiba a frase: não é possível realizar essa operação pois não existe raiz quadrada de número negativo. 
+c. Caso o delta seja igual a zero, exibe a frase: a função possui raiz dupla e mostre apenas um valor;
+#include<iostream>
+#include <iomanip>
+using namespace std;
+
+    int a, b, c;
+
+void bhaskara(int a,int b, int c){
+    double delta = (b*b) - (4*a*c);
+    double x1 = ((-1 * b) + delta) / (2 * a);
+    double x2 = ((-1 * b) - delta) / (2 * a);
+    cout << fixed << setprecision(2) << endl;
+    
+    if (delta < 0){
+         cout <<"IMPOSSÍVEL: Não é possível realizar essa operação pois não existe raiz quadrada de número negativo" << endl;         
+         cout << "Resultado = " <<  x1 << endl;
+    } else if( delta == 0){
+        cout << "a função não possui raiz dupla" << endl;
+    } else{
+         cout << "Resultado x1 = " <<  x1 << endl;
+         cout << "Resultado x2 = " <<  x2 << endl;
+    }
+}
+
+int main(){
+    
+    cout << "Digite três valores para uma equação quadrática:" << endl;
+    cout << "variável a = " endl;
+    cin >> a;
+    cout << "variável b = " << endl;
+    cin >> b;
+    cout << "variável c = "<< endl;
+    cin >> c;
+
+    bhaskara(a, b, c);
+    
+    return 0;
+}
+
+    }
+    }
+
+int main(){
+ Bhaskara();
+
+}
+
+
+
