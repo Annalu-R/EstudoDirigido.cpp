@@ -1,0 +1,82 @@
+1. Uma Lista também pode receber outros nomes. Quais são os outros nomes que em nossa disciplina também podem ser usados como sinônimos de listas? 
+R: Arrey e vector.
+
+.2 Qual o objetivos e quais as vantagens de se usar Listas em detrimento do uso de variáveis comuns?
+R: O objetivo é guardar um valor representado que está na memória do computador. Ela apenas guarda um valor.
+
+ 3. Complete as lacunas: 
+a. Toda lista possui um __ índice __ número que se inicia em 0; 
+b. Uma lista nativa em cpp tem um tamanho _ 8 bits _;
+c. Uma lista usando a classe Vector tem como principal característica ter tamanho dinâmicos  _;
+
+ 4. O que significa Iterar sobre uma lista?
+R: Repetir, tornar a fazer; ou no caso das listas : percorrer elemento por elemento.
+
+ 5. Quais as formas de iterar uma lista?
+R: Chamando a função usando for ou while.
+
+ 6. O que são funções?
+R: São blocos de códigos que podem executar qualquer tarefa.
+
+ 7. Quais as vantagens de se usar funções?
+R: Permite a reutilização de código, a decomposição de um problema em partes menores, encapsular a lógica e as variáveis de uma função.
+
+ 8. O que significa “declarar” e “chamar” uma função? Na sua opinião porque existe esse fluxo de funcionamento? 
+R: Para podermos usar a função na hora em que precisamos, para deixar o código mais organizado. 
+
+9. O que significa dizer que uma função possui parâmetros? 
+R: São valores que serão utilizados na função, e quando ela for chamada esses valores devem ser informados, já que estão na estrutura da função. 
+
+.10 O que é o retorno de uma função? 
+R: A função, além de mostrar o resultado, retorna um valor para quem a chamou.
+
+11. Na sua opinião, o uso de funções poderia ser usado no Estudo dirigido 1? Quais seriam as vantagens?
+R: Sim poderiam. O código seria menos extenso e mais organizado.
+
+
+
+1. Ao executarmos o algoritmo abaixo, o que será impresso na tela?
+for ( int i = 3 ; i < 12 ; i = i +3) {
+   cout << i ;
+}
+
+ RESPOSTA: __369__
+
+2. Ao executarmos o algoritmo abaixo, o que será impresso na tela?
+int foo = 1;
+  while( foo <= 5){
+cout << foo;
+ foo++;
+}
+
+ RESPOSTA:__12345__
+
+1. Ao executarmos o algoritmo abaixo, o que será impresso na tela?
+int  lista[5] = {1,2,3,4,5};
+for (int j = 0; j < 5; ++j){
+  cout << lista[ j ]:
+}
+
+ RESPOSTA: __ 12345 ___
+
+2. Ao executarmos o algoritmo abaixo, o que será impresso na tela?
+int lista[5] = {7,14,99,3,5};
+int x =  lista[0];
+for (int k = 1; k < 5 ; k++){
+if ( lista[k] > x){
+  x = lista[k];
+    }
+} 
+   cout << x ; 
+
+ RESPOSTA: _99_
+
+3. Ao executarmos o algoritmo abaixo, o que será impresso na tela?
+vector<string>cidades = { “Florianópolis”, “Curitiba”  “Medianeira”, “Joinville”};
+sort(cidades.begin(), cidades.end());
+for( int l = 0 ; l < cidades.size() ; l ++){
+   cout << cidades[ l ];
+}  
+
+Resposta: CuritibaMedianeiraFlorianopolisJoinville    
+
