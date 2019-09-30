@@ -130,10 +130,10 @@ e "Já trabalhou com a vítima?"
 #include <iostream>
 using namespace std;
 int set_crime (string culpado);
-int main(){
+int cri[5], classificacao = 0;
+string resultado;
 
-    int cri[5], classificacao = 0;
-    string resultado;
+int main(){
 
     cout << "Telefonou para a vitima?" << "\n";
     cin >> resultado;
@@ -155,16 +155,16 @@ int main(){
     cin >> resultado;
     cri[4] = set_crime(resultado);
 
-    if (  classificacao < 2){
+    if (classificacao < 2){
         cout << "Inocente" << "\n";
     }
-    else if (  classificacao <= 2){
-        cout << "suspeito(a)" << "\n";
+    else if (classificacao == 2){
+        cout << "Suspeito(a)" << "\n";
     }
-    else if (   classificacao <= 2 ||  classificacao <= 5){
+    else if (classificacao == 3 || classificacao == 4){
         cout << "Cumplice" << "\n";
     }
-    else if ( classificacao < 5){
+    else if ( classificacao == 5){
         cout << "Assassino(a)" << "\n";
     }
 
@@ -172,90 +172,37 @@ return 0;
 }
 int set_crime (string culpado){
     if (culpado == "sim") {
-    }
-    else if ( culpado == "nao"){
-    }else{
-    cout << "Digite algo tipo (sim ou nao): ";
-    cin >> culpado;
+    classificacao++;
     }
 }
-#include <iostream>
-using namespace std;
-int set_crime (string culpado);
-int main(){
 
-    int cri[5], classificacao = 0;
-    string resultado;
-
-    cout << "Telefonou para a vitima?" << "\n";
-    cin >> resultado;
-    cri[0] = set_crime(resultado);
-
-    cout << "Esteve no local do crime?" << "\n";
-    cin >> resultado;
-    cri[1] = set_crime(resultado);
-
-    cout << "Mora perto da vitima?" << "\n";
-    cin >> resultado;
-    cri[2] = set_crime(resultado);
-
-    cout << "Devia para a vitima?" << "\n";
-    cin >>resultado;
-    cri[3] = set_crime(resultado);
-
-    cout << "Ja trabalhou com a vitima?" << "\n";
-    cin >> resultado;
-    cri[4] = set_crime(resultado);
-
-    if (  classificacao < 2){
-        cout << "Inocente" << "\n";
-    }
-    else if (  classificacao <= 2){
-        cout << "suspeito(a)" << "\n";
-    }
-    else if (   classificacao <= 2 ||  classificacao <= 5){
-        cout << "Cumplice" << "\n";
-    }
-    else if ( classificacao < 5){
-        cout << "Assassino(a)" << "\n";
-    }
-
-return 0;
-}
-int set_crime (string culpado){
-    if (culpado == "sim") {
-    }
-    else if ( culpado == "nao"){
-    }else{
-    cout << "Digite algo tipo (sim ou nao): ";
-    cin >> culpado;. 
-    }
-}
 
 7. Implemente uma função que receba uma mensagem por parâmetro e retorne essa mensagem em letras minúsculas. 
-#include<iostream>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <vector>
+
 using namespace std;
 
-void mensagem(string word){
+void minusculo (string palavra)
+{
+    for (char teste : palavra)
+    {
+        teste = tolower(teste);
+        cout << teste;
+    }
+}
 
+int main()
+{
+string word;
 cin >> word;
-for( int i = 0 ; i <= word.size ; i++){
-
-string word[ i ];
-
-cout << word[ i ]
-
-
-  
-  cout << mensagem;
-}
-
-int main (){
-
-  return mensagem();
+minusculo (word);
 
 }
-
 
 
 
